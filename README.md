@@ -23,27 +23,51 @@ F2=xy’z+x’y’z+w’xy+wx’y+wxy
 Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
 Developed by: PAVITHRA Y
 RegisterNumber:  212222050043
+
 ##Program 1:
+
 module expfour(a,b,c,d,f);
+
 input a,b,c,d;
+
 output f;
+
 wire f1,f2,f3;
+
 assign f1 = (~c&~b&~a);
+
 assign f2 = (~d&~c&~a);
+
 assign f3 = (c&~(~b)&~a);
+
 assign f= f1&~f2&~f3;
+
 endmodule
+
+
 PROGRAM 2:
+
 module expfourtwo(a,b,c,d,f);
+
 input a,b,c,d;
+
 output f;
+
 wire f1,f2,f3,f4;
+
 assign f1 = c&(~b)&a;
+
+
 assign f2 = d&(~c)&a;
+
 assign f3 = c&(~b)&a;
+
 assign f4 = ~(f1|f2|f3);
+
 not(f,f4);
+
 endmodule
+
 
 */
 ## RTL realization:
